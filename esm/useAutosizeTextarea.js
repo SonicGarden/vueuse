@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, watch } from 'vue-demi';
+import { onMounted, onUnmounted } from 'vue-demi';
 var TEXTAREA_MAX_HEIGHT = 400;
 export var useAutosizeTextarea = function (textarea, maxHeight) {
     if (maxHeight === void 0) { maxHeight = TEXTAREA_MAX_HEIGHT; }
@@ -23,16 +23,12 @@ export var useAutosizeTextarea = function (textarea, maxHeight) {
     };
     onMounted(function () {
         var _a;
+        fitToContent();
         (_a = textarea.value) === null || _a === void 0 ? void 0 : _a.addEventListener('input', fitToContent);
     });
     onUnmounted(function () {
         var _a;
         (_a = textarea.value) === null || _a === void 0 ? void 0 : _a.removeEventListener('input', fitToContent);
-    });
-    // NOTE: To be resized immediately after rendering
-    var stop = watch(textarea, function () {
-        fitToContent();
-        stop();
     });
     var resize = function () {
         reset();

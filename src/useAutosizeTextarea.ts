@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, Ref, watch } from 'vue-demi';
+import { onMounted, onUnmounted, Ref } from 'vue-demi';
 
 const TEXTAREA_MAX_HEIGHT = 400;
 
@@ -35,17 +35,12 @@ export const useAutosizeTextarea = (
   };
 
   onMounted(() => {
+    fitToContent();
     textarea.value?.addEventListener('input', fitToContent);
   });
 
   onUnmounted(() => {
     textarea.value?.removeEventListener('input', fitToContent);
-  });
-
-  // NOTE: To be resized immediately after rendering
-  const stop = watch(textarea, () => {
-    fitToContent();
-    stop();
   });
 
   const resize = (): void => {
