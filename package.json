@@ -36,7 +36,7 @@
     "@vue/composition-api": "^1.0.0-beta.19",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^7.1.0",
@@ -47,7 +47,7 @@
   "dependencies": {
     "clipboard-copy": "^3.2.0",
     "lodash.orderby": "^4.6.0",
-    "vue-demi": "^0.4.3"
+    "vue-demi": "^0.7.4"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-beta.19",
