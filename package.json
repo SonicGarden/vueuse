@@ -27,13 +27,13 @@
   },
   "homepage": "https://github.com/SonicGarden/vueuse#readme",
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=14.0.0"
   },
   "devDependencies": {
     "@types/lodash.orderby": "^4.6.6",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
-    "@vue/composition-api": "^1.0.0-beta.19",
+    "@vue/composition-api": "^1.0.0",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^8.1.0",
@@ -45,12 +45,12 @@
     "vue": "^2.6.12"
   },
   "dependencies": {
-    "clipboard-copy": "^3.2.0",
+    "clipboard-copy": "3.2.0",
     "lodash.orderby": "^4.6.0",
-    "vue-demi": "^0.9.0"
+    "vue-demi": "^0.11.2"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-beta.19",
-    "vue": "^2.0.0 || >=3.0.0-rc.0"
+    "@vue/composition-api": "^1.0.0",
+    "vue": "^2.0.0 || >=3.0.0"
   }
 }
