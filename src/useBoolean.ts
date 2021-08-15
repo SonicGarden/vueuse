@@ -1,12 +1,20 @@
-import { Ref } from 'vue-demi';
-import { useToggle } from './useToggle';
+import { ref, Ref } from 'vue-demi'
 
-type Setter = () => void;
+type Toggle = (nextValue?: boolean) => void
 
-export const useBoolean = (initialValue = false): [Ref<boolean>, Setter, Setter] => {
-  const [state, toggle] = useToggle(initialValue);
-  const setTrue = (): void => toggle(true);
-  const setFalse = (): void => toggle(false);
+type Setter = {
+  on: () => void
+  off: () => void
+  toggle: Toggle
+}
 
-  return [state, setTrue, setFalse];
-};
+export const useBoolean = (initialValue = false): [Ref<boolean>, Setter] => {
+  const state = ref<boolean>(initialValue)
+  const toggle: Toggle = (nextValue) => {
+    state.value = nextValue ?? !state.value
+  }
+  const on = (): void => toggle(true)
+  const off = (): void => toggle(false)
+
+  return [state, { on, off, toggle }]
+}

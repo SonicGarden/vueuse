@@ -1,8 +1,11 @@
-import { useToggle } from './useToggle';
+import { ref } from 'vue-demi';
 export var useBoolean = function (initialValue) {
     if (initialValue === void 0) { initialValue = false; }
-    var _a = useToggle(initialValue), state = _a[0], toggle = _a[1];
-    var setTrue = function () { return toggle(true); };
-    var setFalse = function () { return toggle(false); };
-    return [state, setTrue, setFalse];
+    var state = ref(initialValue);
+    var toggle = function (nextValue) {
+        state.value = nextValue !== null && nextValue !== void 0 ? nextValue : !state.value;
+    };
+    var on = function () { return toggle(true); };
+    var off = function () { return toggle(false); };
+    return [state, { on: on, off: off, toggle: toggle }];
 };
