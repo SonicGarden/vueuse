@@ -3,7 +3,7 @@
 ## Install
 
 ```
-yarn add https://github.com/SonicGarden/vueuse.git#v0.4.0
+yarn add https://github.com/SonicGarden/vueuse.git#v0.5.0
 ```
 
 ## Hooks
