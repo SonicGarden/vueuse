@@ -30,16 +30,11 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
+    "@sonicgarden/eslint-plugin": "^0.2.5",
+    "@sonicgarden/prettier-config": "^0.0.1",
     "@types/lodash.orderby": "^4.6.6",
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
     "@vue/composition-api": "^1.0.0",
     "eslint": "^7.12.1",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^7.1.0",
     "prettier": "^2.1.2",
     "typescript": "^4.0.5",
     "vue": "^2.6.12"
@@ -51,5 +46,6 @@
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0",
     "vue": "^2.0.0 || >=3.0.0"
-  }
+  },
+  "prettier": "@sonicgarden/prettier-config"
 }
