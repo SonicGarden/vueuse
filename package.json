@@ -1,6 +1,6 @@
 {
   "name": "@sonicgarden/vueuse",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "types/index.d.ts",
@@ -30,7 +30,7 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "@sonicgarden/eslint-plugin": "^0.2.5",
+    "@sonicgarden/eslint-plugin": "^0.3.5",
     "@sonicgarden/prettier-config": "^0.0.1",
     "@types/lodash.orderby": "^4.6.6",
     "@vue/composition-api": "^1.0.0",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "lodash.orderby": "^4.6.0",
-    "vue-demi": "^0.11.2"
+    "vue-demi": "*"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0",
